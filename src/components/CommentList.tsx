@@ -10,7 +10,7 @@ export default function CommentList({ comments}: ICommentListProps) {
         <ul className='comments-list'>
             {
                 comments.map((comment) => {
-                    return <Comment comment={comment} />
+                    return <Comment comment={comment} key={comment.id} />
                 })
             }
         </ul>

@@ -17,7 +17,7 @@ const ArticlePreviews = () => {
 
     useEffect(() => {
         dispatch(loadAllPreviews());
-    }, [dispatch]);
+    }, []);
 
     if (isLoadingPreviews) {
         return <div>loading state</div>;

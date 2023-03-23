@@ -1,6 +1,6 @@
 import { IUserComments } from "./IUserComments";
 
-export interface CommentsState {
+export interface ICommentsState {
     byArticleId: IUserComments;
     isLoadingComments: boolean;
     failedToLoadComments: boolean;

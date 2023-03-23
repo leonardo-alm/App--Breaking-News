@@ -48,7 +48,7 @@ export const handlers = [
                 articleId: parseInt(articleId),
                 comments: commentsData
                     .filter((comment) => comment.articleId === parseInt(articleId))
-                    .concat(userCommentsForArticle),
+                    .concat(userCommentsForArticle)
             })
         );
     }),
@@ -58,9 +58,8 @@ export const handlers = [
         const commentResponse = {
             id: commentsData.length,
             articleId: parseInt(articleId),
-            text: JSON.parse(JSON.stringify(req.body)).comment,
+            text: JSON.parse(String(req.body)).comment
         };
-
         if (userComments[articleId]) {
             userComments[articleId].push(commentResponse);
         } else {

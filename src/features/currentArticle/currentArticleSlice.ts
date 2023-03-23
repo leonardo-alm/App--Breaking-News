@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { ArticleState } from '../../interfaces/IArticleState';
+import { IArticleState } from '../../interfaces/IArticleState';
 
 export const loadCurrentArticle = createAsyncThunk(
     'currentArticle/loadCurrentArticle',
@@ -11,7 +11,7 @@ export const loadCurrentArticle = createAsyncThunk(
     }
 );
 
-const initialState: ArticleState = {
+const initialState: IArticleState = {
     article: undefined,
     isLoadingCurrentArticle: false,
     hasError: false

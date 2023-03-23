@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { CommentsState } from '../../interfaces/ICommentsState';
+import { ICommentsState } from '../../interfaces/ICommentsState';
 
 export const loadCommentsForArticleId = createAsyncThunk(
     'comments/loadCommentsForArticleId',
@@ -24,7 +24,7 @@ export const postCommentForArticleId = createAsyncThunk(
     }
 );
 
-const initialState: CommentsState = {
+const initialState: ICommentsState = {
     byArticleId: {},
     isLoadingComments: false,
     failedToLoadComments: false,

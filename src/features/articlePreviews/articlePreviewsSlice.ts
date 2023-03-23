@@ -34,7 +34,6 @@ export const articlePreviewsSlice = createSlice({
                 state.articles = [];
             });
     },
-
 });
 
 export const selectAllPreviews = (state: RootState) => state.articlePreviews.articles;
